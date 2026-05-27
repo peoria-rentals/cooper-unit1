@@ -32,6 +32,13 @@
   70%);
         pointer-events: none;
       }
+      .hero-tags {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.4rem;
+      }
       .hero-tag {
         display: inline-block;
         background: rgba(232,168,56,0.15);
@@ -39,11 +46,10 @@
         border: 1px solid rgba(232,168,56,0.3);
         font-size: 0.75rem;
         font-weight: 600;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
         padding: 0.35rem 1rem;
         border-radius: 999px;
-        margin-bottom: 1.2rem;
       }
       .hero h1 {
         font-size: clamp(1.8rem, 5vw, 2.8rem);
@@ -58,6 +64,10 @@
         color: #888;
         margin-bottom: 1.8rem;
       }
+      .price-block {
+        display: inline-block;
+        text-align: center;
+      }
       .price-pill {
         display: inline-flex;
         align-items: baseline;
@@ -70,11 +80,18 @@
       }
       .price-pill .amount { font-size: 1.6rem; }
       .price-pill .per { font-size: 0.85rem; opacity: 0.75; }
+      .price-sub {
+        display: block;
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        color: #666;
+      }
 
       .avail-bar {
         margin-top: 1.5rem;
         font-size: 0.85rem;
         color: #aaa;
+        line-height: 1.7;
       }
       .avail-bar strong { color: #f0f0f0; }
 
@@ -242,14 +259,24 @@
   <body>
 
   <div class="hero">
-    <div class="hero-tag">Now Available</div>
+    <div class="hero-tags">
+      <span class="hero-tag">5 Min Walk to Bradley</span>
+      <span class="hero-tag">Roommate-Ready 2BR</span>
+      <span class="hero-tag">Fall 2026</span>
+    </div>
     <h1>616 N <span>Cooper St</span><br>First Floor Unit</h1>
     <p class="address">Peoria, Illinois 61606</p>
-    <div class="price-pill">
-      <span class="amount">$1,500</span>
-      <span class="per">/ month</span>
+    <div class="price-block">
+      <div class="price-pill">
+        <span class="amount">$750</span>
+        <span class="per">/ roommate</span>
+      </div>
+      <span class="price-sub">$1,500 / month total</span>
     </div>
-    <p class="avail-bar">Available <strong>June 8, 2026</strong></p>
+    <p class="avail-bar">
+      Available <strong>June 8, 2026</strong><br>
+      <strong>Move in before the fall semester starts</strong>
+    </p>
   </div>
 
   <div class="gallery">
@@ -268,19 +295,21 @@
   class="lbl">Bathrooms</span></div>
       <div class="stat"><span class="val">1,000</span><span class="lbl">Sq
   Ft</span></div>
-      <div class="stat"><span class="val">2</span><span
-  class="lbl">Entrances</span></div>
+      <div class="stat"><span class="val">5 min</span><span class="lbl">To
+  Bradley</span></div>
     </div>
 
     <div class="card">
       <h2>Features</h2>
       <div class="features">
+        <div class="feature">Newly updated kitchen</div>
         <div class="feature">First floor unit</div>
         <div class="feature">Private entrance</div>
         <div class="feature">Street entrance</div>
         <div class="feature">Private parking</div>
         <div class="feature">Street parking</div>
         <div class="feature">Trash included</div>
+        <div class="feature">2 entrances</div>
       </div>
       <p class="util-note">Tenant responsible for electricity, gas, and water.</p>
     </div>
